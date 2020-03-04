@@ -14,7 +14,8 @@ config_s2i
 echo "---> Installing application source code"
 cp -Rf /tmp/src/*.html ./
 
-DTAE=`date`
+DATE=`date`
+
 echo "--->  Creating Info page"
 echo "The page was created at $DATE" >> ./info.html
 echo "Apache HTTP version $HTTPD_VERSION " >> ./info.html
@@ -39,4 +40,4 @@ else
 fi
 
 # Fix source directory permissions
-fix-permissions ./
+#fix-permissions ./
